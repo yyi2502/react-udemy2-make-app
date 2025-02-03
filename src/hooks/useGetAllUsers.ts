@@ -18,10 +18,12 @@ export const useGetAllUsers = () => {
       );
       setUsers(response.data);
     } catch {
-      showMessage({ title: "読み込めませんでした", type: "error" });
+      showMessage({
+        title: "ユーザー一覧を読み込めませんでした",
+        type: "error",
+      });
     } finally {
       setIsLoading(false);
-      showMessage({ title: "成功しました", type: "success" });
     }
   }, []);
 

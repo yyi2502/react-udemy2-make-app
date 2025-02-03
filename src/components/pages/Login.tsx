@@ -5,7 +5,7 @@ import PrimaryButton from "../atoms/button/PrimaryButton";
 import useAuth from "../../hooks/useAuth";
 
 const Login: FC = memo(() => {
-  const { login, isLoading } = useAuth();
+  const { login } = useAuth();
 
   const [userId, setUserId] = useState<string>("");
   const [isDisabled, setIsDisabled] = useState<boolean>(true);
